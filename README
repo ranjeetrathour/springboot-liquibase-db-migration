@@ -4,3 +4,8 @@ mvn liquibase:update:
 mvn liquibase:generateChangeLog "-Dliquibase.outputChangeLogFile=src/main/resources/db/changelog/sql/db-structure.mysql.sql":
 - Used to generate a changelog containing all table structure (`CREATE TABLE`) statements from an existing database.
 - Important: If you are using MySQL, the filename **must end with `.mysql.sql`** to ensure proper SQL generation.
+
+ mvn liquibase:generateChangeLog "-Dliquibase.diffTypes=data" "-Dliquibase.dataOutputDirectory=src/main/resources/db/changelog/data" "-Dliquibase.outputChangeLogFile=src/main/resources/db/changelog/sql/insert-data1.mysql.sql"
+ - used to get data from the table
+
+ Note-: if we have run one file first time then we can't run this file again
