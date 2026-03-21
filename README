@@ -1,1 +1,6 @@
-mvn liquibase:update: is used to apply all pending Liquibase changelog changes to the database and update its schema.
+mvn liquibase:update:
+- Used to apply all pending Liquibase changelog changes to the database and update its schema.
+
+mvn liquibase:generateChangeLog "-Dliquibase.outputChangeLogFile=src/main/resources/db/changelog/sql/db-structure.mysql.sql":
+- Used to generate a changelog containing all table structure (`CREATE TABLE`) statements from an existing database.
+- Important: If you are using MySQL, the filename **must end with `.mysql.sql`** to ensure proper SQL generation.
