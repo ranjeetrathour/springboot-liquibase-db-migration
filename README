@@ -8,4 +8,3 @@ mvn liquibase:generateChangeLog "-Dliquibase.outputChangeLogFile=src/main/resour
  mvn liquibase:generateChangeLog "-Dliquibase.diffTypes=data" "-Dliquibase.dataOutputDirectory=src/main/resources/db/changelog/data" "-Dliquibase.outputChangeLogFile=src/main/resources/db/changelog/sql/insert-data1.mysql.sql"
  - used to get data from the table
 
- Note-: if we have run one file first time then we can't run this file again
