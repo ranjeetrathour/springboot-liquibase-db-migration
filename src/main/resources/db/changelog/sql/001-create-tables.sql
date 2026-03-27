@@ -16,6 +16,30 @@ CREATE TABLE IF NOT EXISTS school
 ALTER TABLE school
     ADD COLUMN student_type VARCHAR(50);
 
+--changeset ranjeet-rathour:003
+CREATE TABLE IF NOT EXISTS mail_config (
+  id BIGINT PRIMARY KEY,
+    host VARCHAR(255),
+    port INT,
+    username VARCHAR(255),
+    password VARCHAR(255),
+    auth BOOLEAN,
+    starttls BOOLEAN
+    );
+
+--changeset ranjeet-rathour:004
+INSERT INTO mail_config (
+    id, host, port, username, password, auth, starttls
+) VALUES (
+             1,
+             'smtp.gmail.com',
+             587,
+             'ranjeet.rathour@moptra.com',
+             'your_app_password_here',
+             true,
+             true
+         );
+
 
 -- changeset ranje:1774073410776-1
 -- INSERT INTO school (id, name, city) VALUES (1, 'a', 'a');
