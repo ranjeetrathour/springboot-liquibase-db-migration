@@ -26,8 +26,8 @@ public class Beans {
         mailSender.setUsername(config.getUsername());
         mailSender.setPassword(config.getPassword());
         Properties props = mailSender.getJavaMailProperties();
-        props.put("mail.smtp.auth", config.isAuth());
-        props.put("mail.smtp.starttls.enable", config.isStarttls());
+        /*props.put("mail.smtp.auth", config.isAuth());
+        props.put("mail.smtp.starttls.enable", config.isStarttls());*/
 
         return mailSender;
     }
